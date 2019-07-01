@@ -1,0 +1,15 @@
+//
+//  Debug.xcconfig
+//  SampleFitBit
+//
+//  Created by mobiiworld on 27/06/19.
+//  Copyright © 2019 mobiiworld. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+FITBIT_CLIENT_ID = 22DM5M
+FITBIT_CLIENT_SECRET = 6d45d1af5fba54b2935eddffa26c2c90
+AUTH_URL = https:/$()/www.fitbit.com/oauth2/authorize
+ROOT_URL = https:/$()/api.fitbit.com/1/user/-/
+REDIRECT_URI = samplefitbit:/$()/milan
