@@ -234,6 +234,7 @@
                                         <state key="normal" title="History"/>
                                         <connections>
                                             <action selector="tappedHistory:" destination="6V2-pW-cDR" eventType="touchUpInside" id="gRp-cF-FFK"/>
+                                            <segue destination="koT-tJ-EEn" kind="push" id="6Ue-jF-BII"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -270,23 +271,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-hc-XxK">
                                 <rect key="frame" x="20" y="333" width="374" height="230"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDK-Sd-GAp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Start Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-GC-HRo">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="2QL-VQ-ij6"/>
+                                            <constraint firstAttribute="height" constant="50" id="Zah-ID-bDs"/>
                                         </constraints>
-                                        <state key="normal" title="Start Date"/>
-                                        <connections>
-                                            <action selector="tappedStartButton:" destination="koT-tJ-EEn" eventType="touchUpInside" id="7U5-lQ-942"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-4D-DZT">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="End Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXe-ay-pIu">
                                         <rect key="frame" x="0.0" y="60" width="374" height="50"/>
-                                        <state key="normal" title="End Date"/>
-                                        <connections>
-                                            <action selector="tappedEndButton:" destination="koT-tJ-EEn" eventType="touchUpInside" id="5n8-Ls-kzp"/>
-                                        </connections>
-                                    </button>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Steps :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s4-fY-rdK">
                                         <rect key="frame" x="0.0" y="120" width="374" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -312,9 +311,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XzI-77-JLs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fkj-OG-kQ9"/>
                     <connections>
-                        <outlet property="endDateButton" destination="QCG-4D-DZT" id="fU6-KH-l6f"/>
-                        <outlet property="startDateButton" destination="YDK-Sd-GAp" id="i3W-co-lbh"/>
+                        <outlet property="endDateField" destination="UXe-ay-pIu" id="QHM-Ua-BGH"/>
+                        <outlet property="startDateField" destination="u4g-GC-HRo" id="9jU-Ii-UiJ"/>
                         <outlet property="totalStepLabel" destination="1s4-fY-rdK" id="gyf-Bg-fIh"/>
                     </connections>
                 </viewController>
