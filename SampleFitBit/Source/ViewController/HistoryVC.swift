@@ -15,18 +15,26 @@ class HistoryVC: UIViewController {
     @IBOutlet var totalStepLabel: UILabel!
     var datePickerView = UIDatePicker()
     let healthManager = HealthManager()
-    
+
+    var isFitBit: Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setDatePicker()
+        if let dict = (UserDefaults.standard.dictionary(forKey: "userObject")) {
+            isFitBit = (dict["deviceType"] as! String) == "FitBit"
+        }
+        self.navigationController?.isNavigationBarHidden = false
     }
     
-    func dateFromFormat(_ date: String) -> Date
-    {
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func dateFromFormat(_ date: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         let date = dateFormatter.date(from: date)
-        return date!
+        return date
     }
     
     func setDatePicker() {
@@ -63,7 +71,15 @@ class HistoryVC: UIViewController {
     }
     
     @IBAction func tappedGetSteps(_ sender: Any) {
-        healthManager.fetchStepCount(dateFromFormat(startDateField.text!), dateFromFormat(endDateField.text!)) { (steps, success) in
+        isFitBit ? getStepFromFitBit() : getStepFromHealthKit()
+    }
+    
+    
+    func getStepFromHealthKit() {
+        guard let startDate = dateFromFormat(startDateField.text!), let endDate = dateFromFormat(endDateField.text!) else {
+            return
+        }
+        healthManager.fetchStepCount(startDate, endDate) { (steps, success) in
             DispatchQueue.main.async {
                 if success {
                     self.totalStepLabel.text = String(Int(steps))
@@ -74,6 +90,22 @@ class HistoryVC: UIViewController {
         }
     }
     
-    
-
+    func getStepFromFitBit() {
+        guard let startDate = dateFromFormat(startDateField.text!), let endDate = dateFromFormat(endDateField.text!) else {
+            return
+        }
+        APIManager.fetchSteps(for: DateInterval(start: startDate, end: endDate)) { (success, json, error) in
+            if success {
+                var stepCount = 0
+                for obj in (((json as! [String: Any])["activities-tracker-steps"]) as! NSArray) {
+                    let objectStep = (obj as! [String: Any])["value"] as! String
+                    stepCount = stepCount + (Int(objectStep) ?? 0)
+                }
+                
+                DispatchQueue.main.async {
+                    self.totalStepLabel.text = String(stepCount)
+                }
+            }
+        }
+    }
 }

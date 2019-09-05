@@ -12,7 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static var appdelegate: AppDelegate {
+        get {
+            return UIApplication.shared.delegate as! AppDelegate
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         moveToScreen()
@@ -52,14 +56,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func moveToScreen() {
-        var vc = UIViewController()
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         if let dict = UserDefaults.standard.dictionary(forKey: "userObject") , (dict["initialLogin"] != nil) {
-            vc = storyboard.instantiateViewController(withIdentifier: dict["deviceType"] as! String)
-            
+            self.moveToHome()
         } else {
-            vc = storyboard.instantiateViewController(withIdentifier: "InitialVC")
+            self.moveToInitial()
         }
+    }
+
+    func moveToHome() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StepCountViewController") as! StepCountViewController
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.isTranslucent = false
         navigationController.isNavigationBarHidden = true
@@ -68,6 +74,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
-
+    func moveToInitial() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "InitialVC") as! InitialVC
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.isNavigationBarHidden = true
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+    }
 }
 

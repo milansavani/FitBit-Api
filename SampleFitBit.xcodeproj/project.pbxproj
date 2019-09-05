@@ -15,7 +15,6 @@
 		01CD8C07231650AC00541276 /* StepCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD8C06231650AC00541276 /* StepCountViewController.swift */; };
 		01CD8C0A2316539500541276 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD8C092316539500541276 /* HealthKit.framework */; };
 		01EC548822C4DCBA009AB88B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC548722C4DCBA009AB88B /* AppDelegate.swift */; };
-		01EC548A22C4DCBA009AB88B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC548922C4DCBA009AB88B /* ViewController.swift */; };
 		01EC548D22C4DCBA009AB88B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EC548B22C4DCBA009AB88B /* Main.storyboard */; };
 		01EC548F22C4DCBC009AB88B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EC548E22C4DCBC009AB88B /* Assets.xcassets */; };
 		01EC549222C4DCBC009AB88B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EC549022C4DCBC009AB88B /* LaunchScreen.storyboard */; };
@@ -56,7 +55,6 @@
 		01CD8C0B2316539500541276 /* SampleFitBit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleFitBit.entitlements; sourceTree = "<group>"; };
 		01EC548422C4DCBA009AB88B /* SampleFitBit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleFitBit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EC548722C4DCBA009AB88B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01EC548922C4DCBA009AB88B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01EC548C22C4DCBA009AB88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01EC548E22C4DCBC009AB88B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01EC549122C4DCBC009AB88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			children = (
 				017384D62320E3D30079F015 /* HistoryVC.swift */,
 				01CD8C06231650AC00541276 /* StepCountViewController.swift */,
-				01EC548922C4DCBA009AB88B /* ViewController.swift */,
 				017384D22320D3BF0079F015 /* InitialVC.swift */,
 			);
 			path = ViewController;
@@ -393,7 +390,6 @@
 				01EC54CF22C4F608009AB88B /* APIManager.swift in Sources */,
 				01561F0222C62FFE00B56F90 /* StepStat.swift in Sources */,
 				01EC54BB22C4E23F009AB88B /* AuthenticationController.swift in Sources */,
-				01EC548A22C4DCBA009AB88B /* ViewController.swift in Sources */,
 				01EC54CC22C4EEBE009AB88B /* BaseAPIManager.swift in Sources */,
 				01EC548822C4DCBA009AB88B /* AppDelegate.swift in Sources */,
 				01EC54C822C4E5ED009AB88B /* Config.swift in Sources */,
