@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		01561EFF22C5ECC600B56F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01561EFE22C5ECC600B56F90 /* Constants.swift */; };
 		01561F0222C62FFE00B56F90 /* StepStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01561F0122C62FFE00B56F90 /* StepStat.swift */; };
+		017384D32320D3BF0079F015 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017384D22320D3BF0079F015 /* InitialVC.swift */; };
+		01CD8C052316501A00541276 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD8C042316501A00541276 /* HealthManager.swift */; };
+		01CD8C07231650AC00541276 /* StepCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD8C06231650AC00541276 /* StepCountViewController.swift */; };
+		01CD8C0A2316539500541276 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD8C092316539500541276 /* HealthKit.framework */; };
 		01EC548822C4DCBA009AB88B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC548722C4DCBA009AB88B /* AppDelegate.swift */; };
 		01EC548A22C4DCBA009AB88B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC548922C4DCBA009AB88B /* ViewController.swift */; };
 		01EC548D22C4DCBA009AB88B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EC548B22C4DCBA009AB88B /* Main.storyboard */; };
@@ -43,6 +47,11 @@
 /* Begin PBXFileReference section */
 		01561EFE22C5ECC600B56F90 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		01561F0122C62FFE00B56F90 /* StepStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepStat.swift; sourceTree = "<group>"; };
+		017384D22320D3BF0079F015 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+		01CD8C042316501A00541276 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		01CD8C06231650AC00541276 /* StepCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountViewController.swift; sourceTree = "<group>"; };
+		01CD8C092316539500541276 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		01CD8C0B2316539500541276 /* SampleFitBit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleFitBit.entitlements; sourceTree = "<group>"; };
 		01EC548422C4DCBA009AB88B /* SampleFitBit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleFitBit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EC548722C4DCBA009AB88B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01EC548922C4DCBA009AB88B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD8C0A2316539500541276 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		01CD8C082316539500541276 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01CD8C092316539500541276 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		01EC547B22C4DCBA009AB88B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +131,7 @@
 				01EC549B22C4DCBC009AB88B /* SampleFitBitTests */,
 				01EC54A622C4DCBC009AB88B /* SampleFitBitUITests */,
 				01EC548522C4DCBA009AB88B /* Products */,
+				01CD8C082316539500541276 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +148,7 @@
 		01EC548622C4DCBA009AB88B /* SampleFitBit */ = {
 			isa = PBXGroup;
 			children = (
+				01CD8C0B2316539500541276 /* SampleFitBit.entitlements */,
 				01EC54BD22C4E279009AB88B /* Config */,
 				01EC54C522C4E58D009AB88B /* Source */,
 				01EC54B722C4E223009AB88B /* Application */,
@@ -161,7 +181,9 @@
 		01EC54B522C4E1FA009AB88B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				01CD8C06231650AC00541276 /* StepCountViewController.swift */,
 				01EC548922C4DCBA009AB88B /* ViewController.swift */,
+				017384D22320D3BF0079F015 /* InitialVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -223,6 +245,7 @@
 		01EC54C922C4EE85009AB88B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				01CD8C042316501A00541276 /* HealthManager.swift */,
 				01EC54C222C4E3F1009AB88B /* Network */,
 			);
 			path = Manager;
@@ -296,6 +319,11 @@
 				TargetAttributes = {
 					01EC548322C4DCBA009AB88B = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					01EC549722C4DCBC009AB88B = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -368,6 +396,9 @@
 				01EC54C822C4E5ED009AB88B /* Config.swift in Sources */,
 				01561EFF22C5ECC600B56F90 /* Constants.swift in Sources */,
 				01F60B2522CA06B500623A14 /* AppAlertController.swift in Sources */,
+				017384D32320D3BF0079F015 /* InitialVC.swift in Sources */,
+				01CD8C052316501A00541276 /* HealthManager.swift in Sources */,
+				01CD8C07231650AC00541276 /* StepCountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +575,7 @@
 			baseConfigurationReference = 01EC54BC22C4E270009AB88B /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleFitBit/SampleFitBit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YUJ5S863SW;
 				INFOPLIST_FILE = SampleFitBit/Info.plist;
@@ -562,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleFitBit/SampleFitBit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YUJ5S863SW;
 				INFOPLIST_FILE = SampleFitBit/Info.plist;

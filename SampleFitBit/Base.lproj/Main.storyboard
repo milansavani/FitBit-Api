@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8LA-a9-Sbh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,26 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="u0j-5u-F3f">
-            <objects>
-                <navigationController id="8LA-a9-Sbh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0Q-q7-PkT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lm3-7j-Gjw" kind="relationship" relationship="rootViewController" id="e0y-xQ-hAj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3yz-CT-Ofc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-529" y="156"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="FWY-uV-LFX">
             <objects>
-                <viewController id="lm3-7j-Gjw" customClass="ViewController" customModule="SampleFitBit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="lm3-7j-Gjw" customClass="ViewController" customModule="SampleFitBit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fe2-Qe-muA"/>
                         <viewControllerLayoutGuide type="bottom" id="x7d-Sq-Pkg"/>
@@ -39,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5R4-aj-oWC">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFI-hq-6p0">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="41"/>
@@ -68,13 +52,13 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please press login to authorize" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YIe-FI-AhK">
-                                        <rect key="frame" x="0.0" y="61" width="398" height="575"/>
+                                        <rect key="frame" x="0.0" y="61" width="398" height="619"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Uj-g2-rwU">
-                                        <rect key="frame" x="0.0" y="656" width="398" height="41"/>
+                                        <rect key="frame" x="0.0" y="700" width="398" height="41"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I6-83-AJn">
                                                 <rect key="frame" x="99" y="0.0" width="200" height="41"/>
@@ -100,7 +84,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efm-T6-aUG">
-                                        <rect key="frame" x="0.0" y="717" width="398" height="41"/>
+                                        <rect key="frame" x="0.0" y="761" width="398" height="41"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q13-id-e72">
                                                 <rect key="frame" x="79" y="3" width="240" height="35"/>
@@ -146,7 +130,134 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgn-Og-g7A" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="155"/>
+            <point key="canvasLocation" x="1123" y="-210"/>
+        </scene>
+        <!--InitialVC-->
+        <scene sceneID="dl3-0u-hJt">
+            <objects>
+                <viewController storyboardIdentifier="InitialVC" id="Sml-iv-OV2" customClass="InitialVC" customModule="SampleFitBit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2da-c0-CaM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-Vw-W9g">
+                                <rect key="frame" x="87" y="375" width="240" height="146"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTI-YB-QcP">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="41"/>
+                                        <color key="backgroundColor" red="0.20471760629999999" green="0.62197351460000005" blue="0.54102832079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="9bF-mm-50h"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="sDL-7a-y7W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="Fitbit">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedFitBit:" destination="Sml-iv-OV2" eventType="touchUpInside" id="SuI-BT-mrn"/>
+                                            <segue destination="lm3-7j-Gjw" kind="push" id="3f3-Qe-tQb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-V5-8me">
+                                        <rect key="frame" x="0.0" y="105" width="240" height="41"/>
+                                        <color key="backgroundColor" red="0.99607843137254903" green="0.30196078431372547" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="GUU-tl-JPC"/>
+                                            <constraint firstAttribute="height" constant="41" id="v5u-mC-0tM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="HealthKit">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedHealthKit:" destination="Sml-iv-OV2" eventType="touchUpInside" id="Q4m-Am-Y9N"/>
+                                            <segue destination="6V2-pW-cDR" kind="push" id="1JA-da-cjm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uL0-Vw-W9g" firstAttribute="centerX" secondItem="2da-c0-CaM" secondAttribute="centerX" id="Iye-E4-8hd"/>
+                            <constraint firstItem="uL0-Vw-W9g" firstAttribute="centerY" secondItem="2da-c0-CaM" secondAttribute="centerY" id="hrM-Lk-DPr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bvG-3U-n8i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zIW-t4-86D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzU-Y7-gF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261" y="155"/>
+        </scene>
+        <!--Step Count View Controller-->
+        <scene sceneID="98i-Eo-v7R">
+            <objects>
+                <viewController storyboardIdentifier="StepCountViewController" id="6V2-pW-cDR" customClass="StepCountViewController" customModule="SampleFitBit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UeB-PU-bDi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-vC-gkk">
+                                <rect key="frame" x="139.5" y="408" width="135.5" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've covered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCV-de-5Gv">
+                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKV-Ob-QJP">
+                                        <rect key="frame" x="0.0" y="28" width="135.5" height="52"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="52"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7U0-Sl-39d">
+                                <rect key="frame" x="20" y="732" width="374" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGv-54-UeX">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="c6C-Jm-XkT"/>
+                                        </constraints>
+                                        <state key="normal" title="Select other device"/>
+                                        <connections>
+                                            <action selector="tappedOtherDevice:" destination="6V2-pW-cDR" eventType="touchUpInside" id="B3i-MG-GLU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPo-oQ-Q7O">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                        <state key="normal" title="History"/>
+                                        <connections>
+                                            <action selector="tappedHistory:" destination="6V2-pW-cDR" eventType="touchUpInside" id="gRp-cF-FFK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dVK-vC-gkk" firstAttribute="centerX" secondItem="UeB-PU-bDi" secondAttribute="centerX" id="Lbg-37-bWJ"/>
+                            <constraint firstItem="7U0-Sl-39d" firstAttribute="leading" secondItem="zNK-8l-PTN" secondAttribute="leading" constant="20" id="NV8-ky-yp0"/>
+                            <constraint firstItem="dVK-vC-gkk" firstAttribute="centerY" secondItem="UeB-PU-bDi" secondAttribute="centerY" id="aoD-52-MtK"/>
+                            <constraint firstItem="zNK-8l-PTN" firstAttribute="trailing" secondItem="7U0-Sl-39d" secondAttribute="trailing" constant="20" id="ole-Dk-OeO"/>
+                            <constraint firstItem="zNK-8l-PTN" firstAttribute="bottom" secondItem="7U0-Sl-39d" secondAttribute="bottom" constant="20" id="vlS-Gu-Vrz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zNK-8l-PTN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CVd-q6-cK7"/>
+                    <connections>
+                        <outlet property="stepCountLabel" destination="GKV-Ob-QJP" id="Zog-Mx-kcY"/>
+                        <outlet property="welcomeDescription" destination="MCV-de-5Gv" id="4fh-Oe-8oC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtC-0a-SId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121.7391304347827" y="521.65178571428567"/>
         </scene>
     </scenes>
 </document>

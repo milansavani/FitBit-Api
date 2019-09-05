@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        moveToScreen()
         // Override point for customization after application launch.
         return true
     }
@@ -50,6 +51,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func moveToScreen() {
+        var vc = UIViewController()
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        if let dict = UserDefaults.standard.dictionary(forKey: "userObject") , (dict["initialLogin"] != nil) {
+            vc = storyboard.instantiateViewController(withIdentifier: dict["deviceType"] as! String)
+            
+        } else {
+            vc = storyboard.instantiateViewController(withIdentifier: "InitialVC")
+        }
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.isNavigationBarHidden = true
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+    }
 
 }
 

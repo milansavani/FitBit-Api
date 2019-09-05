@@ -17,6 +17,8 @@ enum APIEndPoints {
         case fetchActivities = "activities/date/"
         case fetchStep = "activities/steps/date/"
         case fetchCalories = "activities/calories/date/"
+        
+        //use tracker api for the tracking data "activities/tracker/steps/date/"
     }
     
 //    enum ACTIVITY: String {
