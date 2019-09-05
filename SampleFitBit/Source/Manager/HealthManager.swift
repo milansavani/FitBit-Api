@@ -72,7 +72,6 @@ class HealthManager {
     
     func fetchStepCount(_ startDate : Date  ,_ endDate : Date,_ completionHandler: @escaping (Double, Bool) -> Void) {
 
-        let endDate = Date()
         let type = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: HKQueryOptions())
         let query = HKSampleQuery(sampleType: type!, predicate: predicate, limit: 10, sortDescriptors: nil) { _, results, error in

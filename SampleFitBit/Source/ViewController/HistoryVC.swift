@@ -31,6 +31,7 @@ class HistoryVC: UIViewController {
     
     func setDatePicker() {
         datePickerView.datePickerMode = .date
+        datePickerView.maximumDate = Date()
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
@@ -53,7 +54,7 @@ class HistoryVC: UIViewController {
         } else {
             endDateField.text = String(describing : datePickerView.date)
         }
-        datePickerView = UIDatePicker()
+        datePickerView.date = Date()
         self.view.endEditing(true)
     }
     
@@ -65,8 +66,9 @@ class HistoryVC: UIViewController {
         healthManager.fetchStepCount(dateFromFormat(startDateField.text!), dateFromFormat(endDateField.text!)) { (steps, success) in
             DispatchQueue.main.async {
                 if success {
-                    print(steps)
                     self.totalStepLabel.text = String(Int(steps))
+                } else {
+                    self.totalStepLabel.text = "0"
                 }
             }
         }
