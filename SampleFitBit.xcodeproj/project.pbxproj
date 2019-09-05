@@ -10,6 +10,7 @@
 		01561EFF22C5ECC600B56F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01561EFE22C5ECC600B56F90 /* Constants.swift */; };
 		01561F0222C62FFE00B56F90 /* StepStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01561F0122C62FFE00B56F90 /* StepStat.swift */; };
 		017384D32320D3BF0079F015 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017384D22320D3BF0079F015 /* InitialVC.swift */; };
+		017384D72320E3D30079F015 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017384D62320E3D30079F015 /* HistoryVC.swift */; };
 		01CD8C052316501A00541276 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD8C042316501A00541276 /* HealthManager.swift */; };
 		01CD8C07231650AC00541276 /* StepCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD8C06231650AC00541276 /* StepCountViewController.swift */; };
 		01CD8C0A2316539500541276 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD8C092316539500541276 /* HealthKit.framework */; };
@@ -48,6 +49,7 @@
 		01561EFE22C5ECC600B56F90 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		01561F0122C62FFE00B56F90 /* StepStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepStat.swift; sourceTree = "<group>"; };
 		017384D22320D3BF0079F015 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+		017384D62320E3D30079F015 /* HistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		01CD8C042316501A00541276 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		01CD8C06231650AC00541276 /* StepCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountViewController.swift; sourceTree = "<group>"; };
 		01CD8C092316539500541276 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -181,6 +183,7 @@
 		01EC54B522C4E1FA009AB88B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				017384D62320E3D30079F015 /* HistoryVC.swift */,
 				01CD8C06231650AC00541276 /* StepCountViewController.swift */,
 				01EC548922C4DCBA009AB88B /* ViewController.swift */,
 				017384D22320D3BF0079F015 /* InitialVC.swift */,
@@ -398,6 +401,7 @@
 				01F60B2522CA06B500623A14 /* AppAlertController.swift in Sources */,
 				017384D32320D3BF0079F015 /* InitialVC.swift in Sources */,
 				01CD8C052316501A00541276 /* HealthManager.swift in Sources */,
+				017384D72320E3D30079F015 /* HistoryVC.swift in Sources */,
 				01CD8C07231650AC00541276 /* StepCountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -259,5 +259,68 @@
             </objects>
             <point key="canvasLocation" x="1121.7391304347827" y="521.65178571428567"/>
         </scene>
+        <!--HistoryVC-->
+        <scene sceneID="DfE-8I-kk0">
+            <objects>
+                <viewController storyboardIdentifier="HistoryVC" id="koT-tJ-EEn" customClass="HistoryVC" customModule="SampleFitBit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSP-Hs-aZh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-hc-XxK">
+                                <rect key="frame" x="20" y="333" width="374" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDK-Sd-GAp">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2QL-VQ-ij6"/>
+                                        </constraints>
+                                        <state key="normal" title="Start Date"/>
+                                        <connections>
+                                            <action selector="tappedStartButton:" destination="koT-tJ-EEn" eventType="touchUpInside" id="7U5-lQ-942"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-4D-DZT">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                        <state key="normal" title="End Date"/>
+                                        <connections>
+                                            <action selector="tappedEndButton:" destination="koT-tJ-EEn" eventType="touchUpInside" id="5n8-Ls-kzp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Steps :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s4-fY-rdK">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-Ff-SSD">
+                                        <rect key="frame" x="0.0" y="180" width="374" height="50"/>
+                                        <state key="normal" title="Get Steps"/>
+                                        <connections>
+                                            <action selector="tappedGetSteps:" destination="koT-tJ-EEn" eventType="touchUpInside" id="GfE-vb-Mtt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RYU-hc-XxK" firstAttribute="leading" secondItem="XzI-77-JLs" secondAttribute="leading" constant="20" id="Bq0-2J-4j0"/>
+                            <constraint firstItem="RYU-hc-XxK" firstAttribute="centerX" secondItem="lSP-Hs-aZh" secondAttribute="centerX" id="c50-67-fPJ"/>
+                            <constraint firstItem="XzI-77-JLs" firstAttribute="trailing" secondItem="RYU-hc-XxK" secondAttribute="trailing" constant="20" id="lcn-k9-ure"/>
+                            <constraint firstItem="RYU-hc-XxK" firstAttribute="centerY" secondItem="lSP-Hs-aZh" secondAttribute="centerY" id="uia-mn-Dhu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XzI-77-JLs"/>
+                    </view>
+                    <connections>
+                        <outlet property="endDateButton" destination="QCG-4D-DZT" id="fU6-KH-l6f"/>
+                        <outlet property="startDateButton" destination="YDK-Sd-GAp" id="i3W-co-lbh"/>
+                        <outlet property="totalStepLabel" destination="1s4-fY-rdK" id="gyf-Bg-fIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xI-Yn-7yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="108"/>
+        </scene>
     </scenes>
 </document>
