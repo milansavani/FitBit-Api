@@ -115,6 +115,7 @@ class StepCountViewController: UIViewController {
         }
         else {
             welcomeDescription.text = "You've covered"
+            startTime = ((UserDefaults.standard.dictionary(forKey: "userObject") as! [String : Any])["initialLogin"] as? Date)!
             healthManager.listenForUpdates(startDate : startTime){ steps, success in
                 DispatchQueue.main.async {
                     if success {
