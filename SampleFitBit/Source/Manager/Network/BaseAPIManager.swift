@@ -62,10 +62,6 @@ class BaseAPIManager {
             let (key, value) = arg
             request.addValue(value, forHTTPHeaderField: key)
         }
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted) else {
-            return
-        }
-        request.httpBody = httpBody
         
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in

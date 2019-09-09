@@ -34,7 +34,6 @@ class StepCountViewController: UIViewController {
                 getSteps()
             }
         }
-        startTime = ((UserDefaults.standard.dictionary(forKey: "userObject") as! [String : Any])["initialLogin"] as? Date)!
         self.title = isFitBit ? "FitBit" : "HealthKit"
     }
     
@@ -80,6 +79,7 @@ class StepCountViewController: UIViewController {
     //MARK:-
     //MARK:- Custom Actions
     private func getSteps() {
+         startTime = ((UserDefaults.standard.dictionary(forKey: "userObject") as! [String : Any])["initialLogin"] as? Date)!
         APIManager.fetchSteps(for: DateInterval(start: startTime, end: Date())) { (success, json, error) in
             if success {
                 var stepCount = 0

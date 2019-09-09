@@ -19,9 +19,12 @@ class InitialVC: UIViewController {
     }
     
     @IBAction func tappedFitBit(_ sender: Any) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let someDateTime = formatter.date(from: "2019/08/01")
         authenticationController = AuthenticationController(delegate: self)
         authenticationController?.login(fromParentViewController: self)
-        let dict = ["deviceType" : "FitBit" , "initialLogin" : Date()] as [String : Any]
+        let dict = ["deviceType" : "FitBit" , "initialLogin" : someDateTime!] as [String : Any]
         let defaults = UserDefaults.standard
         defaults.set(dict, forKey: "userObject")
         defaults.synchronize()
@@ -29,7 +32,10 @@ class InitialVC: UIViewController {
     }
     
     @IBAction func tappedHealthKit(_ sender: Any) {
-        let dict = ["deviceType" : "HealthKit" , "initialLogin" : Date()] as [String : Any]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let someDateTime = formatter.date(from: "2019/08/01")
+        let dict = ["deviceType" : "HealthKit" , "initialLogin" : someDateTime!] as [String : Any]
         let defaults = UserDefaults.standard
         defaults.set(dict, forKey: "userObject")
         defaults.synchronize()

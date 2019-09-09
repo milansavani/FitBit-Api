@@ -18,7 +18,7 @@ class AuthenticationController: NSObject {
     let clientSecret = Config.shared.fitbitClientSecret
     let authURL = Config.shared.authURL
     static let redirectURI = Config.shared.appURI
-    let defaultScope = "sleep+settings+nutrition+activity+social+heartrate+profile+weight+location"
+    let defaultScope = "activity+profile"
     
     var authorizationVC: SFSafariViewController?
     var delegate: AuthenticationProtocol?
